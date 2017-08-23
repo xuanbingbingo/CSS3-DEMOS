@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>音频</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			li{
+				width: 500px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				background: #ccc;
+				margin-top: 30px;
+			}
+			.a{
+				background: pink;
+			}
+			video{
+				width: 500px;
+				margin-top: 30px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>视频一</li>
+			<li>视频二</li>
+		</ul>
+		<video src="img/picture.mp4"></video>
+		<video src="img/picture.mp4"></video>
+		<script>
+			var lis = document.getElementsByTagName("li");
+			var vid = document.getElementsByTagName("video");
+			for(var i = 0;i< lis.length; i++){
+				lis[i].onclick = function(){
+					for(var i = 0;i < lis.length;i++){
+						if(lis[i]==this){
+							lis[i].className = "a";
+							lis[i].style.display = "block";
+							vid[i].load();
+							vid[i].play();
+						}else{
+							lis[i].className = "";
+							lis[i].style.display = "none";
+							vid[i].pause();
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

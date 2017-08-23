@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{margin:0;padding:0}
+			figure{
+				width:500px;
+				height:300px;
+				background: #ccc;
+			}
+			img{
+				width:87px;
+				height:78px;
+				position:absolute;
+				transition: all 0.2s;
+				left:100px;
+				top:20px;
+			}
+			img:hover{
+				transform: scale(1.5,1.5) rotate(-360deg);
+			}
+			div{
+				position: absolute;
+				left:70px;
+				top:120px;
+				height:30px;
+				width:150px;
+				border:2px solid #fff;
+				color:red;
+				line-height: 30px;
+				background-image: url(img/bg.png);
+				background-repeat: no-repeat;
+				background-position:80px 5px ;
+				transition:all 0.5s;
+			}
+			div:hover{
+				background-position:100px 5px ;
+			}
+			p{
+				margin-left:20px;
+			}
+			span{
+				display: block;
+				position:absolute;
+				transition: all 0.5s;
+			}
+			#span1{
+				transform: translate(-110px,-32px);
+				width:40px;
+				height:0px;
+				border:1px solid #fff;
+				opacity:0;
+			}
+			#span2{
+				transform: translate(150px,-140px);
+				width:0px;
+				height:30px;
+				border:1px solid #fff;
+				opacity:0;
+			}
+			#span3{
+				transform: translate(260px,0px);
+				width:40px;
+				height:0px;
+				border:1px solid #fff;
+				opacity:0;
+			}
+			#span4{
+				transform: translate(0px,80px);
+				width:0px;
+				height:30px;
+				border:1px solid #fff;
+				opacity:0;
+			}
+			div:hover #span1{
+				transform: translate(-2px,-32px);
+				opacity:1;
+			}
+			div:hover #span2{
+				transform: translate(150px,-32px);
+				opacity:1;
+			}
+			div:hover #span3{
+				transform: translate(110px,0px);
+				opacity:1;
+			}
+			div:hover #span4{
+				transform: translate(-2px,-30px);
+				opacity:1;
+			}
+			div:hover p{
+				text-shadow: 0 0 1px red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<figure>
+			<img src="img/icon1.png"/>
+			<div>
+				<p>icon1</p>
+				<span id="span1"></span>
+				<span id="span2"></span>
+				<span id="span3"></span>
+				<span id="span4"></span>
+			</div>
+		</figure>
+	</body>
+</html>

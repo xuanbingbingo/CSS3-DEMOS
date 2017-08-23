@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>canvas-胜利号</title>
+		<style>
+			*{margin: 0;padding: 0;}
+		</style>
+	</head>
+	<body>
+		<canvas id="cvs" width="800" height="500"></canvas>
+		<script>
+			var cvs = document.getElementById("cvs"); //得到一张纸
+			var ctx = cvs.getContext("2d");  //这张纸上得到一个2d画笔
+//			ctx.beginPath();
+//			ctx.font = "bold 50px 黑体";
+//			ctx.textAlign = "right";//绘制文本时当前文本基线
+//			ctx.textBaseline = "bottom";//基本不用，垂直方向;
+//			ctx.fillStyle = "blue";
+//			ctx.fillText("千峰教育",100,100);
+			ctx.beginPath();
+			ctx.fillStyle = "black";
+			ctx.fillRect(300,0,50,30);
+			ctx.fillRect(300,30,10,200);
+			ctx.fillRect(250,230,100,30);
+			ctx.fillRect(200,260,200,60);
+			ctx.closePath();
+			
+			ctx.beginPath();
+			ctx.moveTo(100,280);
+			ctx.lineTo(500,280);
+			ctx.lineTo(400,320);
+			ctx.lineTo(200,320);
+			ctx.closePath();
+			ctx.fillStyle = "black";
+			ctx.fill();
+			
+			ctx.beginPath();
+			ctx.font = "bold 40px 微软雅黑";
+			ctx.fillStyle = "yellow";
+			ctx.fillText("胜利号 ",250,300);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

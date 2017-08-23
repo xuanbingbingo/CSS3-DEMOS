@@ -1,0 +1,10 @@
+{
+	"index.html": {
+		"resources": [
+			"images/社区-首页_02.jpg",
+			"ico/iconfont.woff",
+			"ico/iconfont.css",
+			"images/jiajiao_04.jpg"
+		]
+	}
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+		<title>iScroll-弹性布局</title>
+		<style>
+			*{margin:0;padding: 0;}
+			body,html{
+				width:100%;
+				height:100%;
+			}
+			li{
+				list-style: none;
+				height:80px;
+				line-height: 80px;
+			}
+			.out{
+				margin:0 auto;
+				height:100%;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				width:640px;	
+				
+			}
+			header,footer{
+				height:80px;
+				width:640px;
+			}
+			header{
+				font-size:50px;height:80px;line-height:80px;
+			}
+			footer{
+				background:#ccc;
+			}
+			section{
+				-webkit-box-flex: 1;
+				width:640px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="out">
+			<header>
+				播放列表
+			</header>
+			<section>
+				<ul>
+					<li>1111111111</li>
+					<li>1111111111</li>
+					<li>1111111111</li>
+					<li>1111111111</li>
+					<li>1111111111</li>
+					<li>1111111111</li>
+					<li>1111111111</li>
+					<li>1111111111</li>
+				</ul>
+			</section>
+			<footer></footer>
+		</div>
+		<script src="js/zepto-1.1.6.min.js"></script>
+		<script src="js/touch.js"></script>
+		<script type="text/javascript" src="js/iscroll.js" ></script>
+		<script>
+			function bodyScale(){
+				var devicewidth=document.documentElement.clientWidth;
+					var scale=devicewidth/640;
+					document.body.style.zoom=scale;
+			}
+			window.onload=window.onresize=function(){
+				bodyScale();
+			}
+			var myScroll = new IScroll('section', { 
+                    mouseWheel: true, 
+                    scrollbars: true
+ 			});
+// 			setTimeout(function () { myScroll.refresh();}, 0);
+   			$(document).on("touchend",function(){
+   				if(myScroll.y > 50){
+   					alert("下拉刷新");
+   				}
+   				if(myScroll.y<myScroll.maxScrollY-50){
+   					alert("上啦加载");
+   				}
+   			})
+// 			myScroll.destroy();销毁myScroll
+		</script>
+	</body>
+</html>

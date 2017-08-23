@@ -1,0 +1,26 @@
+{
+	"index.html": {
+		"resources": [
+			"images/nissan-0830_02.jpg",
+			"images/juxing_03.png",
+			"images/jishu_03.jpg",
+			"images/yizuche_19.jpg",
+			"images/dongfeng_03.jpg",
+			"js/jquery.min.js",
+			"images/section_bg_15.jpg",
+			"images/baoxianguanjia_19.jpg",
+			"images/list_10.jpg",
+			"js/touch.js",
+			"images/jiaguanzhu_23.jpg",
+			"images/qichen_03.png",
+			"font/iconfont.css",
+			"images/banner_13.jpg",
+			"font/iconfont.woff",
+			"images/logo1_03.png",
+			"images/bottom_bg_19.jpg",
+			"images/tel_23.jpg",
+			"images/zhixing_19.jpg",
+			"js/zepto-1.1.6.min.js"
+		]
+	}
+}

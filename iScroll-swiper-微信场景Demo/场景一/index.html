@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<style>
+	body,html{width:100%;height:100%;}
+	header{
+		background:#000;
+		width:640px;
+		height:80px;
+		color:#fff;
+		font-size:50px;
+		line-height:80px;
+		text-align: center;
+	}
+	.audio{
+		position: absolute;
+		top:80px;
+		right:20px;
+		z-index:10;
+		width:44px;
+		height:44px;
+		border-radius: 50%;
+		background: url(imgs/css_sprite01.png) 0 0 no-repeat;
+		animation: move 3s linear infinite;
+	}
+	@keyframes move{
+		0%{transform:rotate(0deg)}
+		0%{transform:rotate(-360deg)}
+	}
+	.sw,.s1,.s2,.s3,.sw2{width:100%;height:100%;}
+	.s1{background:url(imgs/bg.jpg) 0 0 no-repeat;background-size:cover;}
+	.s2{background:url(imgs/bg2.jpg) 0 0 no-repeat;background-size:cover;position:relative;}
+	.img1{width:558px;height:370px;margin:50px;}
+	.img2{width:382px;height:276px;position: absolute;left:40px;top:60px;}
+	.img3{width:176px;height:460px;position: absolute;right:0;top:60px;}
+	.img4{width:190px;height:146px;position: absolute;left:40px;top:355px;}
+	.img5{width:556px;height:306px;position: absolute;left:40px;top:520px;}
+	.img6{width:478px;height:4px;position:absolute;left:80px;top:900px;}
+	.p1{font-size:40px;color:#fff;float:right;margin-right:30px;}
+	.p2{width:180px;height:146px;position: absolute;left:240px;top:355px;color:rgb(166,166,166);background:#fff;font-size:30px;}
+	.p2 p{margin-left:10px;}
+	.p3{
+		color:#fff;
+		font-size:38px;
+		position:absolute;
+		left:200px;
+		bottom: 100px;
+	}
+	.s3{background:url(imgs/bg3.jpg) 0 0 no-repeat;background-size:cover;position:relative;}
+	.img7{width:524px;height:402px;position:absolute;left:40px;top:10px;padding:20px;background:#fff;}
+	.img8{width:460px;height:284px;position:absolute;left:60px;top:420px;padding:20px;background:#fff;}
+	.img9{width:512px;height:374px;position:absolute;left:40px;top:710px;padding:20px;background:#fff;}
+	.s4{background:url(imgs/bg3.jpg) 0 0 no-repeat;background-size:cover;position:relative;}
+	.img10{width:312px;height:92px;position:absolute;left:100px;top:80px;}
+	.img11{width:148px;height:82px;position:absolute;right:40px;top:30px;}
+	.aa{animation-name: mmm;}
+	@keyframes mmm{
+		0%{transform: rotate(30deg)}
+		50%{transform: rotate(360deg)}
+		100%{transform: rotate(30deg)}
+	}
+	.lastword{
+		position: absolute;
+		left:35px;
+		top:200px;
+		font-size: 24px;
+		color: #c4c4c4;
+		text-align: center;
+	}
+	.lastword span{
+		margin:0 auto;
+		display: block;
+		line-height: 2;
+	}
+</style>
+</head>
+<body>
+	<header>时光不老 我们不散</header>
+	<div class="audio"></div>
+	<audio id="audio" src="media/王菲 - 致青春.mp3" autoplay></audio> 
+	<div class="swiper-container sw">
+		<div class="swiper-wrapper sw2"> 
+			<div class="swiper-slide s1">
+				<img src="imgs/1.png" class="ani img1" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+				<p class="ani p1"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">---2015年7月<br>XX大学XX学院XX班</p>
+			</div>
+			<div class="swiper-slide s2">
+				<img src="imgs/11.jpg" class="ani img2" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+				<img src="imgs/biye.png" class="ani img3" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+				<img src="imgs/12.jpg" class="ani img4" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+				<img src="imgs/13.jpg" class="ani img5" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+				<img src="imgs/heng.png" class="ani img6" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="">
+				<div class="ani p2"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s"><p>来大学时</p><p>还不太懂你</p><p>离开时</p><p>才刻骨铭心</p></div>
+				<div class="ani p3"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s">我们毕业了</div>
+			</div>
+			<div class="swiper-slide s3">
+				<img src="imgs/12.jpg" class="ani img7" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+				<img src="imgs/13.jpg" class="ani img8" swiper-animate-effect="rotateIn" swiper-animate-duration="1s" swiper-animate-delay="">
+				<img src="imgs/11.jpg" class="ani img9" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="">
+			</div>
+			<div class="swiper-slide s4">
+				<img src="imgs/suiyue.png" class="ani img10" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+				<img src="imgs/feiji.png" class="ani img11" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+				<div class="ani lastword" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1s" swiper-animate-delay="1.0s">
+					<span>时光匆匆，抓不住，留不住</span><span>曾经的不满，抱怨，如今都化为卷帘</span><span>四年，我们用同样的要是开同一扇门</span><span>四年，我们用同样的眼神，仰望同一个焦点</span><span>四年，我们同呼吸，共成长</span><span>那些开心的，悲伤地，嬉笑的，彷徨的，使我们的青春</span><span>如今，挥手告别过去</span><span>挥不去你青涩的面孔</span><span>还有四年的形影不离</span><span>你的身影跳跃在我脑海</span><span>你的微笑停留在我眼角</span><span>青春的日子里，有你陪我一起疯狂</span><span>记忆凝成画卷 美得不敢触摸</span>
+				</div>
+			</div>
+		</div> 
+	<div class="swiper-pagination"></div>
+	</div> 
+</body>
+<script type="text/javascript" src="js/zepto-1.1.6.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+<script>
+function bodyScale(){
+var devicewidth=document.documentElement.clientWidth;
+	var scale=devicewidth/640;
+	document.body.style.zoom=scale;
+}
+window.onload=window.onresize=function(){
+	bodyScale();
+	var mySwiper = new Swiper ('.swiper-container', { 
+		direction: 'vertical',
+		pagination: '.swiper-pagination',
+		paginationType:'fraction',
+		onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit 
+			swiperAnimateCache(swiper); //隐藏动画元素 		
+			swiperAnimate(swiper); //初始化完成开始动画
+		}, 
+		onSlideChangeEnd: function(swiper){
+		 	swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+		} 
+	}) 
+}
+//控制音乐的播放和暂停
+var au = document.getElementsByClassName("audio")[0];
+var aud = document.getElementById("audio");
+var bTag = 0;
+$(au).on("touchend",function(){
+	if(bTag == 0){
+		aud.pause();
+		au.style.animationPlayState = "paused";
+		bTag = 1;
+	}
+	else{
+		aud.play();
+		au.style.animationPlayState = "running";
+		bTag = 0;
+	}
+})
+</script>
+</html>

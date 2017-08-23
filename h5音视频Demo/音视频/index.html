@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>音视频</title>
+		<style>
+			*{margin: 0;padding: 0}
+			button{
+				margin-left:20px;
+				margin-top:20px;
+			}
+			video{
+				margin:20px;
+			}
+			label{
+				display: block;
+				margin:20px;
+			}
+		</style>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button id="get">获取</button>
+		<button id="play">播放</button>
+		<button id="pause">暂停</button>
+		<button id="area1">100%</button>
+		<button id="area2">75%</button>
+		<button id="area3">50%</button>
+		<button id="goahead">快进</button>
+		<button id="goback">快退</button>
+		<button id="restart">从头播放</button>
+		<button id="volumn">静音/恢复</button>
+		<video width="960" height="540" id="video">
+			<source src="img/picture.mp4"></source>
+		</video>
+		<label id="content"></label>
+		<script>
+			var video = document.getElementById("video");
+			var get = document.getElementById("get");
+			var content = document.getElementById("content");
+			var play = document.getElementById("play");
+			get.onclick = function(){
+			var duration = video.duration;
+			var currentTime = video.currentTime;
+			var state = "";
+			if(video.paused){
+				state = "暂停中";	
+			}else{
+				state = "播放中";	
+			}
+				content.innerHTML = "视频总时长是:"+duration+"s<br>视频当前播放时长是:"+currentTime+"s<br>当前播放状态是:"+state;
+			}
+			play.onclick = function(){
+				video.play();
+			}
+			pause.onclick = function(){
+				video.pause();
+			}
+			area1.onclick = function(){
+				video.style.width = "960px";
+				video.style.height = "540px";
+			}
+			area2.onclick = function(){
+				video.style.width = "720px";
+				video.style.height = "405px";
+			}
+			area3.onclick = function(){
+				video.style.width = "480px";
+				video.style.height = "270px";
+			}	
+		</script>
+	</body>
+</html>

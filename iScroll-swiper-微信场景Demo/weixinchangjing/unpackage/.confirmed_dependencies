@@ -1,0 +1,19 @@
+{
+	"index.html": {
+		"resources": [
+			"imgs/2.jpg",
+			"js/swiper.animate1.0.2.min.js",
+			"css/animate.min.css",
+			"imgs/5.png",
+			"js/touch.js",
+			"js/swiper-3.3.1.jquery.min.js",
+			"imgs/1.jpg",
+			"imgs/2.png",
+			"imgs/3.png",
+			"imgs/3.jpg",
+			"css/reset.css",
+			"css/swiper-3.3.1.min.css",
+			"js/zepto-1.1.6.min.js"
+		]
+	}
+}

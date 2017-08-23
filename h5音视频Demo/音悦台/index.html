@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content=""/>
+		<meta name="description" content=""/>
+		<meta name="viewport" content="width=device-width,mininum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no"/>
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0}
+			li{
+				list-style: none;
+			}
+			html,body{
+				height: 100%;
+				width: 100%;
+			}
+			body{
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-box-align: center;
+				background:rgba(30,30,249,0.2);
+			}
+			header,footer{
+				text-align: center;
+				height: 80px;
+				width:100%;
+				line-height: 80px;
+			}
+			header{
+				background:orange;
+				font-size:38px;
+			}
+			footer{
+				background:rgba(255,0,0,0.1);
+				display: -webkit-box;
+			}
+			section{
+				-webkit-box-flex: 1;
+				width:100%;
+				overflow: auto;
+			}
+			section ul{
+				-webkit-box-flex: 1;
+			}
+			section li{
+				line-height:80px;
+				text-align: center;
+				font-size: 35px;
+				height:80px;
+				width:100%;
+				border-bottom:1px solid #ccc;
+			}
+			.active{
+				background:pink;
+			}
+			footer:after{
+				content:" ";
+				clear:both;
+				overflow: hidden;
+				height:0;
+				display: block;
+				visibility:hidden;
+			}
+			footer span{
+				display: block;
+				height:80px;
+				cursor: pointer;
+				font-size:24px;
+				color:#000;
+			}
+			footer span:nth-child(1){
+				-webkit-box-flex:1;
+			}
+			footer span:nth-child(2){
+				-webkit-box-flex:1;
+				background-image: url(img/jtbq_013.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			footer span:nth-child(3){
+				-webkit-box-flex:1;
+			}
+			footer span.now{
+				background-image: url(img/jtbq_014.png);
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>音悦台</header>
+		<audio src="" autoplay></audio>
+		<section>
+			<ul>
+				<li>爱囚-庄心妍</li>
+				<li>宠爱-TF-BOYS</li>
+				<li>小幸运-田馥甄</li>
+				<li>美人鱼-林俊杰</li>
+				<li>爱与希望-林俊杰</li>
+			</ul>
+		</section>
+		<footer><span>上一首</span><span></span><span>下一首</span></footer>
+	</body>
+	<script>
+		var arr = ["video/爱囚.MP3","video/宠爱.MP3","video/小幸运.MP3","video/美人鱼.mp4","video/爱与希望.mp4"];
+		var iIndex = 0;
+		var length = $("li").length;
+		$("ul li").each(function(){
+			$(this).click(function(){
+				iIndex = $(this).index();
+				$("audio").attr("src",arr[iIndex]);
+				$("li").removeClass("active").eq(iIndex).addClass("active");
+			})
+		})
+		//控制当前歌曲的播放和暂停
+		$("span").eq(1).toggle(function(){
+			$(this).addClass("now");
+			$("audio").get(0).pause();
+		},function(){
+			$(this).removeClass("now");
+			$("audio").get(0).play();
+		})
+		//控制下一曲
+		$("span").eq(2).click(function(){
+			iIndex++;
+			if(iIndex > length-1){
+				iIndex = length-1;
+			}
+			$("audio").attr("src",arr[iIndex]);
+			$("li").removeClass("active").eq(iIndex).addClass("active");
+		})
+		//控制上一曲
+		$("span").eq(0).click(function(){
+			iIndex--;
+			if(iIndex < 0){
+				iIndex = 0;
+			}
+			$("audio").attr("src",arr[iIndex]);
+			$("li").removeClass("active").eq(iIndex).addClass("active");
+		})
+	</script>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>不着调</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no"/>
+		<style>
+			*{
+				margin: 0;padding: 0;
+			}
+			body{
+				height:1080px;
+				width:640px;
+				margin:0 auto;
+				overflow: hidden;
+				background-image: url(bg.jpg);
+				background-size:cover;
+			}
+			header{
+				width:640px;
+				height:87px;
+				background:#22292c;
+				text-align: center;
+				line-height: 87px;
+				font-size:38px;
+				color:#fff;
+			}
+			section{
+				width:640px;
+				height:928px;
+			}
+			footer{
+				height:87px;
+				width:640px;
+				background:#008cdb;
+				position:absolute;
+				bottom:0;
+			}
+			footer .left_f,footer .right_f{
+				height:87px;
+				line-height: 87px;
+				color:#ffff00;
+				width:49%;
+				text-align: center;
+				font-size:30px;
+				float:left;
+			}
+			.left_f{
+				border-right:1px solid #ccc;
+			}
+			.hand_first{
+				width: 640px;
+				position:absolute;
+				z-index:-1;
+				left:0;
+				top:-120px;
+				animation: hand_first 1s linear 1;
+			}
+			.hand_second{
+				width: 640px;
+				position:absolute;
+				z-index:-1;
+				left:0;
+				bottom:0;
+				animation:hand_second 1s linear 1;
+			}
+			@keyframes hand_first{
+				0%{transform:translate(0,-680px)}
+				100%{transform:translate(0,0)}
+			}
+			@keyframes hand_second{
+				0%{transform:translate(0,300px)}
+				100%{transform:translate(0,0)}
+			}
+			#hello,#no,#quan,#zhaodiao{
+				position: absolute;
+				z-index: 1;
+			}
+			#hello{
+				transform: translate(0px,10px);
+				animation: hello 1s  linear 1;
+			}
+			#no{
+				transform:translate(180px,100px);
+				animation: no 1s  linear 1;
+			}
+			#zhaodiao{
+				transform:translate(320px,70px) ;
+				animation: zhaodiao 1s  linear 1 ;
+			}
+			#quan{
+				left:368px;
+				top:258px;
+				/*transform: translate(0px,300px);*/
+				animation: quan 1.5s ease-in-out  1;
+			}
+			@keyframes hello{
+				0%{transform: translate(-320px,10px)}
+				100%{transform: translate(0px,10px)}
+			}
+			@keyframes no{
+				0%{transform:translate(180px,-100px)}
+				100%{transform:translate(180px,100px)}
+			}
+			@keyframes zhaodiao{
+				0%{transform:translate(640px,0px) rotate(360deg)}
+				100%{transform:translate(320px,70px) rotate(0deg)}
+			}
+			@keyframes quan{
+				0%{transform: translate(0px,800px) }
+				25%{transform: translate(300px,-300px) }
+				50%{transform: translate(-300px,-200px) }
+				75%{transform: translate(-200px,600px) }
+				100%{transform: translate(0px,0px) }
+			}
+			#xingnan{
+				position: absolute;
+				z-index: 1;
+				top:650px;
+				left:140px;
+				color:#005faf;
+				font-size: 20px;
+				animation: xingnan 1s linear 1;
+			}
+			@keyframes xingnan{
+				0%{transform:translate(-240px,-600px)}
+				33%{transform:translate(240px,-400px)}
+				66%{transform:translate(-240px,-200px)}
+				100%{transform:translate(0,0)}
+			}
+			.wode1{
+				color:#1877c7;
+				text-shadow: 10px 10px 10px #fff000,-10px -10px 10px #fff000,10px -10px 10px #fff000,-10px 10px 10px #fff000;
+				position: absolute;
+				z-index: 1;
+				left:80px;
+				top:360px;
+				animation: wode1 1s linear 1;
+			}
+			.wode1 p{
+				display: inline;
+				font-size:26px;
+			}
+			.wode1 span{
+				font-size:36px;
+			}
+			@keyframes wode1{
+				0%{transform: translate(-300px,0);}
+				100%{transform: translate(0,0);}
+			}
+			@keyframes wode2{
+				0%{transform: translate(300px,0);}
+				100%{transform: translate(0,0);}
+			}
+			.wode2{
+				color:#1877c7;
+				text-shadow: 10px 10px 10px #fff000,-10px -10px 10px #fff000,10px -10px 10px #fff000,-10px 10px 10px #fff000;
+				position: absolute;
+				z-index: 1;
+				left:320px;
+				top:360px;
+				animation: wode2 1s linear 1;
+			}
+			.wode2 p{
+				display: inline;
+				font-size:26px;
+			}
+			.wode2 span{
+				font-size:36px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>我的青春不着调</p>
+		</header>
+		<section>
+			<img class="hand_first" src="images/不着调_01.png">
+			<img class="hand_second" src="images/不着调_03.png">
+			<img id="hello" src="img/t1.png" />
+			<img id="no" src="img/t2.png" />
+			<img id="zhaodiao" src="img/t3.png" />
+			<img id="quan" src="img/t4.png" />
+			<div class="wode1"><p>我的青春</p><span>不着调</span></div>
+			<div class="wode2"><p>换张名片</p><span>多关照</span></div>
+			<p id="xingnan">是型男还是萌妹?选张卡片开始制作吧!</p>
+		</section>
+		<footer>
+			<div class="left_f">首页</div>
+			<div class="right_f">名片夹</div>
+		</footer>
+		<script>
+			function bodyScale(){
+				var devicewidth=document.documentElement.clientWidth;
+					var scale=devicewidth/640;
+					document.body.style.zoom=scale;
+				}
+				window.onload=window.onresize=function(){
+					bodyScale();
+				}
+		</script>
+	</body>
+</html>

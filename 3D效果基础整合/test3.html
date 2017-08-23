@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+	*{margin:0;padding:0;list-style:none;}
+	
+	div{width:200px;height:200px;margin:150px auto;perspective:1000px;}
+	ul{
+		width:200px;height:200px;position:relative;
+		transform-style:preserve-3d;
+		transform:rotateX(29deg) rotateY(20deg) rotateZ(0deg);
+	}
+
+	li{width:200px;height:200px;position:absolute;font-size:35px;line-height:200px;text-align:center;}
+	li:nth-child(1){
+		background:red;
+		transform:translateZ(100px);
+	}
+	li:nth-child(2){
+		background:yellow;
+		transform:rotateY(90deg) translateZ(100px);
+	}
+	li:nth-child(3){
+		background:green;
+		transform:rotateX(90deg) translateZ(100px);
+	}
+	li:nth-child(4){
+		background:blue;
+		transform:rotateX(-90deg) translateZ(100px);
+	}
+	li:nth-child(5){
+		background:orange;
+		transform:rotateY(-90deg) translateZ(100px);
+	}
+	li:nth-child(6){
+		background:#ccc;
+		transform:rotateY(180deg) translateZ(100px);
+	}
+</style>
+</head>
+<body>
+<div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</div>
+	
+</body>
+</html>

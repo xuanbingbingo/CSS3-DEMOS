@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no"/>
+		<title>感心服务</title>
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<style>
+			*{margin: 0;padding: 0;}
+			body{
+				font-family: "微软雅黑";
+			}
+			a{
+				text-decoration: none;
+			}
+			.out{
+				width:640px;
+				margin: 0 auto;
+			}
+			/*头部部分开始*/
+			header{
+				width:640px;
+				height:100px;
+				position: relative;
+			}
+			header img{
+				position:absolute;
+			}
+			.img1{
+				left:40px;
+				top:0;
+			}
+			.img2{
+				left:187px;
+				top:51px;
+			}
+			/*头部下方的头部*/
+			.img3{
+				right:47px;
+				top:48px;
+			}
+			.top{
+				height:47px;
+				width:640px;
+				overflow: hidden;
+			}
+			.top_l{
+				width:323px;
+				height:47px;
+				background:#f1f1f1;
+				float:left;
+			}
+			.top_c{
+				width:247px;
+				height:47px;
+				background: #002870;
+				float:left;
+				position:relative;
+			}
+			.top_c #img1{
+				position:absolute;
+				left:24px;
+				top:6px;
+			}
+			.top_c #img2{
+				position:absolute;
+				left:66px;
+				top:17px;
+			}
+			.top a{
+				position: absolute;
+				left:113px;
+				top:15px;
+				color:#6d97e3;
+			}
+			.top_r{
+				width:70px;
+				height:47px;
+				float:left;
+				background: #6f6f6f;
+				position:relative;
+			}
+			.top_r img{
+				position:absolute;
+				left:22px;
+				top:15px;
+			}
+			/*banner图部分*/
+			.banner{
+				width: 640px;
+				height:512px;
+			}
+			/*列表部分*/
+			section{
+				width:640px;
+			}
+			section .list{
+				padding:0 51px 0 41px;
+				width:548px;
+				height:59px;
+				background: url(images/section_bg_15.jpg) repeat-x;
+				font-size:33px;
+				line-height:59px;
+				color:#fff;
+				box-shadow: 0 2px 2px #ad9f99;
+				position:relative;
+				z-index: 2;
+			}
+			section .font{
+				font-size:22px;
+			}
+			section .list i{
+				float:right;
+				transition:all 0.5s;
+			}
+			section .list i.move{
+				transform: rotate(90deg);
+			}
+			/*所有列表的样式*/
+			section .lis{
+				width:640px;
+				height:554px;
+				background:-webkit-linear-gradient(top,#f7fcfc 0%,#dcf0f3 100%);
+				display: none;
+			}
+			section .lis .bg{
+				width:76px;
+				height:46px;
+			}
+			.lis .content{
+				width:564px;
+				height:532px;
+				background:#f39801;
+				float:right;
+			}
+			.lis .content .main{
+				width:458px;
+				height:505px;
+				float:left;
+				background: #fcf2e8;
+				padding-top:18px;
+				padding-left:58px;
+				padding-right: 40px;
+			}
+			.lis .content .main > h1{
+				height:78px;
+				line-height:78px;
+				font-size:30px;
+				color:#f39801;
+			}
+			.lis .content .main div{
+				float:left;
+			}
+			.lis .content .main div h1{
+				line-height: 40px;
+				font-size:25px;
+				color:#595959;
+			}
+			.lis .content .main div h1 span{
+				margin-left:5px;
+				margin-top:12px;
+				display: block;
+				float:left;
+				height:16px;
+				width:16px;
+				border-radius: 50%;
+				background: #f39801;
+			}
+			.lis .content .main div h1 p{
+				margin-left:10px;
+				float:left;
+			}
+			.lis .content .main div > p{
+				float:left;
+				font-size:25px;
+				line-height: 40px;
+				height:40px;
+			}
+			/*列表2下面的样式*/
+			section .list2{
+				height:402px;
+			}
+			.list2 .content{
+				height:384px;
+			}
+			.list2 .content .main{
+				height:360px;
+				position: relative;
+			}
+			.list2 .content .main > h1{
+				margin-top:70px;
+				height:78px;
+				line-height:78px;
+				font-size:30px;
+				color:#f39801;
+			}
+			.list2 .content .main > img{
+				position:absolute;
+				right:88px;
+				top:47px;
+			}
+			/*列表3下面的样式*/
+			section .list3{
+				height:400px;
+			}
+			.list3 .content{
+				height:384px;
+			}
+			.list3 .content .main{
+				width:458px;
+				height:340px;
+				float:left;
+				background: #fcf2e8;
+				padding-top:38px;
+				padding-left:58px;
+				padding-right: 40px;
+				position:relative;
+			}
+			.list3 .content .main > h1{
+				height:36px;
+				line-height: 36px;
+			}
+			.list3 .content .main > img{
+				position: absolute;
+				right:100px;
+				top:46px;
+			}
+			.list3 .content .main > div{
+				margin-top:30px;
+			}
+			/*列表4*/
+			/*列表2下面的样式*/
+			section .list4{
+				height:800px;
+			}
+			.list4 .content{
+				height:780px;
+			}
+			.list4 .content .main{
+				padding-top:36px;
+				height:734px;
+				position: relative;
+			}
+			.list4 .content .main > h1{
+				margin-top: 0;
+				height:36px;
+				line-height: 36px;
+			}
+			.list4 .content .main > p{
+				float:left;
+				font-size:25px;
+				font-weight: bold;
+				line-height: 40px;
+				height:40px;
+				color:#595959;
+			}
+			.first_p{
+				margin-top:80px;
+				text-indent: 1em;
+			}
+			.list4 .content .main div{
+				float:left;
+			}
+			.list4 .content .main img{
+				position:absolute;
+				left:60px;
+				top:110px;
+			}
+			
+			/*bottom*/
+			.bottom{
+				height:310px;
+				width:562px;
+				background:url(images/bottom_bg_19.jpg) repeat-x;
+				padding-left:78px;
+				padding-top:21px;
+			}
+			.bottom .b_list{
+				margin-top:20px;
+				font-size:18px;
+			}
+			.bottom .b_list h1{
+				color:#333333;
+				font-size:18px;
+			}
+			/*footer*/
+			footer{
+				height:223px;
+				width:600px;
+				padding-top:22px;
+				padding-left:40px;
+			}
+			footer h1{
+				color:#868686;
+				margin-top: 18px;
+			}
+			footer .tel{
+				width:500px;
+				height:38px;
+				line-height:38px;
+				font-size: 28px;
+				background: #c90329;
+				position: relative;
+			}
+			footer .tel:after{
+				content: "";
+				clear: both;
+				height: 0;
+				display: block;
+				visibility: hidden;
+				overflow: hidden;
+			}
+			footer .tel img{
+				position: absolute;
+				left:18px;
+				top:12px;
+			}
+			footer .tel span{
+				color: #fff;
+				float:left;
+				margin-left:50px;
+			}
+			footer .tel p{
+				float:left;
+				margin-left:20px;
+			}
+			footer h1 img{
+				margin-left:20px;
+			}
+			footer > p{
+				margin-top:34px;
+				font-size: 18px;
+				color:#868686;
+			}
+		</style>
+	</head>
+	<body>
+		<video></video>
+		<div class="out">
+			<header>
+				<img class="img1" src="images/nissan-0830_02.jpg">
+				<img class="img2" src="images/jishu_03.jpg">
+				<img class="img3" src="images/dongfeng_03.jpg">
+			</header>
+			<div class="top">
+				<div class="top_l"></div>
+				<div class="top_c">
+					<img id="img1" src="images/logo1_03.png" />
+					<img id="img2" src="images/qichen_03.png">
+					<a href="javascript:;">前往启辰品牌</a>
+				</div>
+				<div class="top_r">
+					<img src="images/list_10.jpg"/>
+				</div>
+			</div>
+			<div class="banner">
+				<img src="images/banner_13.jpg">
+			</div>
+			<section>
+				<div class="list">感心公路<i class="iconfont">&#xe618;</i></div>
+				<div class="lis list1">
+					<img class="bg" src="images/juxing_03.png">
+					<div class="content">
+						<div class="main">
+							<h1>十年盛宴 服务到家</h1>
+							<div><h1><span></span><p>出行"油"礼</p></h1><p>机油套餐8折起,超值“油”礼随心享</p></div>
+							<div><h1><span></span><p>"纯净呼吸"</p></h1><p>清洗空调系统加一元,即可升级PM2.5高</p><p>效净化系统，让您畅享纯境空间</p></div>
+							<div><h1><span></span><p>服务"到家"</p></h1><p>公路服务站+社区服务站全程模式</p><p>提供安全检测等便利服务</p></div>
+						</div>
+					</div>
+				</div>
+				<div class="list">感恩回馈 倍享优惠<i class="iconfont">&#xe618;</i></div>
+				<div class="lis list2">
+					<img class="bg" src="images/juxing_03.png">
+					<div class="content">
+						<div class="main">
+							<h1>感恩回馈 倍享优惠</h1>
+							<img src="images/baoxianguanjia_19.jpg">
+							<div><p>9月23日-10月31日，凡到店续保认证保险商业险2000元以上的客户，尊享机油套餐低至6.8折。</p></div>
+						</div>
+					</div>
+				</div>
+				<div class="list">消费保障全透明 品质租车更优惠<i class="iconfont">&#xe618;</i></div>
+				<div class="lis list3">
+					<img class="bg" src="images/juxing_03.png">
+					<div class="content">
+						<div class="main">
+							<h1>消费保障全透明</h1>
+							<h1>品质租车更优惠</h1>
+							<img src="images/yizuche_19.jpg">
+							<div><p>易租车服务网点联合发布透明保障承诺，以“透明车况、透明服务、透明价格”全面保障您的租车安全，实现透明消费。</p></div>
+						</div>
+					</div>
+				</div>
+				<div class="list font">2013版CARWINGS智行全新上市尊享智能服务大不同<i class="iconfont">&#xe618;</i></div>
+				<div class="lis list4">
+					<img class="bg" src="images/juxing_03.png">
+					<div class="content">
+						<div class="main">
+							<h1>2013版CARINGS智行</h1>
+							<h1>全新上市尊享智能服务大不同</h1>
+							<img src="images/zhixing_19.jpg" />
+							<p class="first_p">2013年CARINGS智行伴随新世</p>
+							<p>代天籁全新上市，功能、保障全面升级，</p>
+							<p>尊享便捷无忧服务。</p>
+							<div><h1><span></span><p>一键出行</p></h1><p>全新一代CARINGS智行，功能升级，</p><p>20秒内搞定目的地；只需轻轻一按，语音</p><p>导航带您轻松抵达目的地</p></div>
+							<div><h1><span></span><p>盗抢无忧</p></h1><p>行业首创“您丢车我赔付”，保障升级</p><p>抢全无忧</p></div>
+							<div><h1><span></span><p>三年安心</p></h1><p>安装全新一代  CARINGS智行，即享同</p><p>级车最长服务期，为您的精彩旅程更添一</p><p>份安心</p></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="bottom">
+				<div class="b_list">
+					<h1>车易换</h1>
+					<p>所有客户置换东风日产全系新车可享现金补贴</p>
+				</div>
+				<div class="b_list">
+					<h1>保险管家经理人大赛</h1>
+					<p>2013年7月-9月东风日产保险管家经理人大赛全面开启</p>
+					<p>9月总决赛，敬请关注</p>
+				</div>
+				<div class="b_list">
+					<h1>第八届售后服务技能大赛</h1>
+					<p>2013年9月5日，25场区域赛同时开赛</p>
+					<p>9月25日-11月6日，6场半决赛，每周一场</p>
+				</div>
+			</div>
+			<footer>
+				<h1>试驾热线</h1>
+				<div class="tel"><img src="images/tel_23.jpg"/><span>4008308899</span><p>(点击拨打免费电话)</p></div>
+				<h1>日产官方微博<img src="images/jiaguanzhu_23.jpg" alt="" /></h1>
+				
+				<p>2013东风日产版权所有 京ICP备05069080号</p>
+			</footer>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/zepto-1.1.6.min.js"></script>
+		<script type="text/javascript" src="js/touch.js"></script>
+		<script>
+			function bodyScale(){
+				var devicewidth=document.documentElement.clientWidth;
+					var scale=devicewidth/640;
+					document.body.style.zoom=scale;
+				}
+			window.onload=window.onresize=function(){
+				bodyScale();
+			}
+			$(".list").on("touchend",function(){
+				var iIndex = $(".list").index($(this));
+				if($(".lis").eq(iIndex).css("display")=="none"){
+					$(this).find("i").addClass("move");
+					$(".lis").eq(iIndex).slideDown(500);
+				}else{
+					$(this).find("i").removeClass("move");
+					$(".lis").eq(iIndex).slideUp(500);
+				}
+			})
+		</script>
+	</body>
+</html>

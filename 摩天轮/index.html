@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>幸福摩天轮</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0}
+			body{
+				background: url(img/2.jpg);
+			}
+			ul{
+				transform-style: preserve-3d;
+				perspective:1000px;
+				position: absolute;
+				width:768px;
+				height:768px;
+				left:300px;
+				top:50px;
+				background: url(img/fsw.png);
+				animation: moveul 10s linear infinite;
+			}
+			li{
+				list-style: none;
+				position: absolute;
+				width:130px;
+				height:170px;
+				transform-origin: center top;
+				animation: moveli 10s linear infinite;
+			}
+			li:nth-child(1){
+				left:320px;
+				top:20px;
+			}
+			li:nth-child(2){
+				left:70px;
+				top:120px;
+			}
+			li:nth-child(3){
+				left:560px;
+				top:130px;
+			}
+			li:nth-child(4){
+				left:670px;
+				top:370px;
+			}
+			li:nth-child(5){
+				left:580px;
+				top:620px;
+			}
+			li:nth-child(6){
+				left:320px;
+				top:720px;
+			}
+			li:nth-child(7){
+				left:80px;
+				top:620px;
+			}
+			li:nth-child(8){
+				left:0px;
+				top:380px;
+			}
+			.xingfu{
+				position: absolute;
+				left:400px;
+				top:330px;
+				z-index: 1;
+			}
+			.arrow{
+				position: absolute;
+				left:660px;
+				top:590px;
+				z-index: 1;
+			}
+			@keyframes moveul{
+				
+				0%{transform: rotateZ(0deg)}
+				100%{transform: rotateZ(360deg)}
+			}
+			@keyframes moveli{
+				0%{transform: rotateZ(0deg)}
+				100%{transform: rotateZ(-360deg)}
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><img src="img/boy.png" alt="" /></li>
+			<li><img src="img/dog.png" alt="" /></li>
+			<li><img src="img/girl.png" alt="" /></li>
+			<li><img src="img/girls.png" alt="" /></li>
+			<li><img src="img/hairboy.png" alt="" /></li>
+			<li><img src="img/mimi.png" alt="" /></li>
+			<li><img src="img/mudog.png" alt="" /></li>
+			<li><img src="img/shamegirl.png" alt="" /></li>
+		</ul>
+		<img class="xingfu" src="img/big-title.png"/>
+		<img class="arrow" src="img/arrow.png"/>
+	</body>
+</html>

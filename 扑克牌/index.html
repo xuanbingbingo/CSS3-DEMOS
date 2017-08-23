@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="">
+		<meta name="description" content=""/>
+		<title>扑克牌效果</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			figure{
+				width:388px;
+				height:518px;
+				margin:50px auto;
+				position:relative;
+			}
+			img{
+				width:388px;
+				height:518px;
+				position: absolute;
+				transition:all 1s;
+				transform-origin:center bottom;
+				transform:rotate(0deg);
+			}
+			figure:hover img:nth-child(7){
+				transform:rotate(180deg);
+			}
+			figure:hover img:nth-child(6){
+				transform:rotate(120deg);
+			}
+			figure:hover img:nth-child(5){
+				transform:rotate(60deg);
+			}
+			figure:hover img:nth-child(4){
+				transform:rotate(0deg);
+			}
+			figure:hover img:nth-child(3){
+				transform:rotate(-60deg);
+			}
+			figure:hover img:nth-child(2){
+				transform:rotate(-120deg);
+			}
+			figure:hover img:nth-child(1){
+				transform:rotate(-180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<figure>
+			<img src="img/IMG_20140406_171743_0.jpg"/>
+			<img src="img/IMG_20130502_112535_0.jpg"/>
+			<img src="img/IMG_20150412_164828.jpg"/>
+			<img src="img/IMG_20150412_133851.jpg"/>
+			<img src="img/IMG_20150411_125124.jpg"/>
+			<img src="img/IMG_20130502_112526_0.jpg"/>
+			<img src="img/IMG_20140124_154205_0.jpg"/>
+		</figure>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>动图</title>
+		<script src="js/jquery.js"></script>
+		<style>
+			*{margin: 0;padding: 0;}
+			div{
+				margin: 30px auto;
+				width:300px;
+				height:300px;
+				border: 1px solid #ccc;
+			}
+			figure{
+				width:180px;
+				height:300px;
+				background-image: url(img/charector.png);
+				animation: move 0.6s step-end infinite;
+			}
+			ul{
+				margin:50px;
+			}
+			li{
+				list-style: none;
+				float:left;
+				margin:30px;
+				border:1px solid #ccc;
+				cursor:pointer;
+				height:30px;
+				line-height:30px;
+				width:60px;
+				text-align: center;
+			}
+			@-webkit-keyframes move{
+				0%{background-position:0px 0;}
+				14.3%{background-position:-180px 0;}
+				28.6%{background-position:-360px 0;}
+				43.2%{background-position:-540px 0;}
+				58%{background-position:-720px 0;}
+				74%{background-position:-900px 0;}
+				100%{background-position:-1080px 0;}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<figure></figure>
+		</div>
+		<ul>
+			<li>快</li>
+			<li>正常</li>
+			<li>慢</li>
+			<li>暂停</li>
+		</ul>
+		<script>
+		$("ul li").click(function(){
+			console.log($(this).get(0));
+			var iIndex = $(this).index();
+			if(iIndex == 0){
+				$("figure").css("animationPlayState","");
+				$("figure").css("animationDuration","0.1s");
+			}else if(iIndex == 1){
+				$("figure").css("animationPlayState","");
+				$("figure").css("animationDuration","0.6s");
+			}
+			else if(iIndex == 2){
+				$("figure").css("animationPlayState","");
+				$("figure").css("animationDuration","1s");
+			}else{
+				$("figure").css("animationPlayState","paused");
+			}
+		})
+		</script>
+	</body>
+</html>

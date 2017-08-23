@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>碰壁反弹</title>
+	<style type="text/css">
+	#wrap{height: 500px;width: 800px;border: 1px solid black;position: relative;}
+	#child{height: 50px;width: 50px;position: absolute;background: #09f;border-radius: 100%; left: 0px;}
+	#div1{width: 150px;height: 300px;background: #cc3;position: relative;top: 200px;left: 180px;}
+	#div2{width: 200px;height: 200px;background: #c33;position: relative;top: -300px;left: 600px; }
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+	var oWrap=document.getElementById("wrap");
+	var oChild=document.getElementById("child");
+	var oDiv1=document.getElementById("div1");
+	var oDiv2=document.getElementById("div2");
+	//原生js获取dom
+	var maxLeft=oWrap.clientWidth-oChild.offsetWidth;//图一
+	var maxTop=oWrap.clientHeight-oChild.offsetHeight;//图二
+	var startX=0;
+	var startY=0;
+	//设置运动div开始位置
+	var x=1;
+	var y=1;
+	//设置运动div开始运动方向
+	var left=oDiv1.offsetLeft-oChild.offsetWidth;//图三
+	//180-50=130
+	var right=oDiv1.offsetLeft+oDiv1.offsetWidth;//图四
+	//180+150=330
+	var top=oDiv1.offsetTop-oChild.offsetHeight;//图五
+	//200-50=150
+	var bottom=maxTop;
+	//第二个同理
+	var left2=oDiv2.offsetLeft-oChild.offsetWidth;//图六
+	var bottom2=oDiv2.offsetHeight;//图六
+	//获取随机数运动div控制bg颜色
+	function random(min,range) {
+	return Math.floor(Math.random() * range+min);
+	}
+	function bg() {
+	var a = random(0,255);
+	var b = random(0,255);
+	var c = random(0,255);
+	oChild.style.background = 'rgba('+a+','+b+','+c+',0.8)';
+	// setTimeout(bg, 1000);
+	}
+	var timer=setInterval(function(){
+	//边线
+	if(startX>maxLeft||startX<0){//左右边界
+	x*=-1;
+	bg();
+	}
+	if(startY>maxTop||startY<0){//上下边界
+	y*=-1;
+	bg();
+	}
+	//障碍物div1
+	if(startX==left&&startY>top){//碰到div1左边界 改变横向运动方向
+	x*=-1;
+	bg();
+	}
+	if(startY==top&&startX>left&&startX<right){//碰到div1上边界 改变竖向运动方向
+	y*=-1;
+	bg();
+	}
+	if(startX==right&&startY>top){//碰到div1右边界 改变横向运动方向
+	x*=-1;
+	bg();
+	}
+	//障碍物div2
+	if(startX==left2&&startY<bottom2){//div2左边界 改变横向运动方向
+	x*=-1;
+	bg();
+	}
+	if(startY==bottom2&&startX>left2){
+	y*=-1;
+	bg();
+	}
+	startX+=x*5;//横向速度
+	startY+=y*5;//竖向速度
+	//运动公式
+	oChild.style.left=startX+"px";
+	oChild.style.top=startY+"px";
+	},30)
+	}
+	</script>
+</head>
+<body>
+ 	<div id="wrap">
+		<div id="child"></div>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</div>
+</body>
+</html>

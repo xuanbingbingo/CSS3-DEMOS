@@ -1,0 +1,31 @@
+{
+	"index.html": {
+		"resources": [
+			"imgs/2.jpg",
+			"js/swiper.animate1.0.2.min.js",
+			"css/animate.min.css",
+			"imgs/5.png",
+			"js/touch.js",
+			"js/swiper-3.3.1.jquery.min.js",
+			"imgs/1.jpg",
+			"imgs/2.png",
+			"imgs/3.png",
+			"imgs/3.jpg",
+			"css/reset.css",
+			"css/swiper-3.3.1.min.css",
+			"js/zepto-1.1.6.min.js",
+			"imgs/bg.jpg",
+			"imgs/13.jpg",
+			"imgs/feiji.png",
+			"imgs/suiyue.png",
+			"imgs/bg3.jpg",
+			"imgs/1.png",
+			"imgs/css_sprite01.png",
+			"imgs/bg2.jpg",
+			"imgs/biye.png",
+			"imgs/12.jpg",
+			"imgs/heng.png",
+			"imgs/11.jpg"
+		]
+	}
+}
